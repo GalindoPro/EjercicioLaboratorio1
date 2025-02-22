@@ -9,7 +9,14 @@ public class Cliente implements Comparable<Cliente> {
     
     
     @Override
-        public int compareTo(Cliente otro) {
-            return Boolean.compare(otro.esPrioritario, this.esPrioritario);
+    public int compareTo(Cliente otroCliente) {
+        if (this.esPrioritario && !otroCliente.esPrioritario) {
+            return -1; // Clientes prioritarios van primero
+        } else if (!this.esPrioritario && otroCliente.esPrioritario) {
+            return 1; // Clientes no prioritarios van después
+        } else {
+            return 0; // Si ambos son prioritarios o no, misma prioridad
         }
+    }
+    
 }
