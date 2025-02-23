@@ -20,7 +20,7 @@ public class Banco {
 
     // metodo agregarCliente
     public void agregarCliente() {
-        System.out.print("Ingrese el nombre del cliente: ");
+        System.out.print("\n Ingrese el nombre del cliente: ");
         String nombre = scanner.nextLine().trim();
 
         if (nombre.isEmpty()) {
@@ -39,7 +39,7 @@ public class Banco {
                 esPrioritario = false;
                 break;
             } else {
-                System.out.println("Entrada no válida. Ingrese 'true' o 'false'.");
+                System.out.println("Entrada no válida. Ingrese 'Si' o 'No'.");
             }
         }
 
@@ -74,7 +74,7 @@ public class Banco {
 
     // metodo menu(switch)
     public void menu() {
-        int opcion;
+        int opcion = 0;
         do {
             System.out.println("\n1. Agregar cliente");
             System.out.println("2. Atender cliente");
